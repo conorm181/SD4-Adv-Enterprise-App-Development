@@ -4,6 +4,8 @@ import com.main.service.AuthorService;
 import com.main.model.Author;
 import java.util.List;
 import java.util.Optional;
+
+import io.swagger.v3.oas.annotations.Operation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -27,6 +29,7 @@ public class AuthorController {
     }
     
     @GetMapping("/authors/{id}")
+    @Operation(summary = "Get an author by ID")
     public ResponseEntity<Author> getOne(@PathVariable long id) {
        Optional<Author> o =  authorService.findOne(id);
        

@@ -90,7 +90,7 @@ public class AuthorController {
         return new ResponseEntity(HttpStatus.OK);
     }
     
-    
+//
 //    @GetMapping(value = "/hateoas/{authorID}", produces = MediaTypes.HAL_JSON_VALUE)
 //    public ResponseEntity<Author> getAuthorWithHATEOAS(@PathVariable long authorID) {
 //        Optional<Author> a = authorService.findOne(authorID);
@@ -115,7 +115,7 @@ public class AuthorController {
             return ResponseEntity.ok(a.get());
          }
     }
-        
+
     @GetMapping(value = "/hateoas", produces = MediaTypes.HAL_JSON_VALUE)
     public CollectionModel<Author> getAllAuthorsHATEOAS() {
 
